@@ -4,7 +4,7 @@ FROM alpine:3.6
 ENV AWS_CLI_VERSION 1.15.3
 
 RUN apk --no-cache update && \
-    apk --no-cache add python py-pip less bash jq && \
+    apk --no-cache add python py-pip less bash jq curl && \
     pip --no-cache-dir install awscli==${AWS_CLI_VERSION} && \
     apk -v --purge del py-pip && \
     rm -rf /var/cache/apk/*
