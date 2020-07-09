@@ -1,6 +1,6 @@
 FROM tbrock/saw:v0.2.0 as saw
 
-FROM alpine:latest
+FROM alpine:3.11
 COPY --from=saw /bin/saw /bin/saw
 
 ENV AWS_CLI_VERSION 1.18.96
