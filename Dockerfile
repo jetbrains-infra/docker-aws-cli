@@ -3,7 +3,7 @@ FROM tbrock/saw:v0.2.0 as saw
 FROM alpine:3.11
 COPY --from=saw /bin/saw /bin/saw
 
-ENV AWS_CLI_VERSION 1.18.96
+ENV AWS_CLI_VERSION 1.27.19
 
 RUN apk --no-cache update && \
     apk --no-cache add python3 less bash jq curl && \
